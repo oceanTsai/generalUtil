@@ -1,0 +1,2 @@
+# generalUtil
+javascript general tools.
