@@ -1,7 +1,10 @@
 # generalUtil
 javascript general tools.
 
-# 
+# install
+npm install general-util --save-dev
+
+# build and test 
 1. npm install
 2. npm run build 將src內之js文件，編譯成 ES2015 js檔。   
 3. npm run start 將會啟動一台 http server 並將 es2015 js 轉成 瀏覽器可用之ES5.   
