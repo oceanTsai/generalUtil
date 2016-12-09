@@ -40,7 +40,7 @@ export const filterFloat=(value)=>(
 		: NaN
 )
 
-export default {
+const generalUtil= {
 	hasVal : hasVal,
 	toStr : toStr,
 	toInt : toInt,
@@ -48,3 +48,9 @@ export default {
 	filterInt : filterInt,
 	filterFloat : filterFloat
 }
+
+if(!window.generalUtil){
+		window.generalUtil = generalUtil
+}
+
+export default generalUtil

@@ -40,7 +40,7 @@ var filterFloat = exports.filterFloat = function filterFloat(value) {
 	);
 };
 
-exports.default = {
+var generalUtil = {
 	hasVal: hasVal,
 	toStr: toStr,
 	toInt: toInt,
@@ -48,5 +48,11 @@ exports.default = {
 	filterInt: filterInt,
 	filterFloat: filterFloat
 };
+
+if (!window.generalUtil) {
+	window.generalUtil = generalUtil;
+}
+
+exports.default = generalUtil;
 
 },{}]},{},[1]);
