@@ -9,6 +9,7 @@
 	<script>
 		console.log(window.generalUtil);
 		let generalUtil = window.generalUtil;
+		let {toInt , hasVal} = generalUtil;
 		var n1 = 123;
 		console.log('toStr',generalUtil.toStr(n1));
 
@@ -21,16 +22,21 @@
 		var n8 = '';
 		var n9 = '0';
 		var n10 = -1;
-		console.log('n2',generalUtil.hasVal(n2));
-		console.log('n3',generalUtil.hasVal(n3));
-		console.log('n4',generalUtil.hasVal(n4));
-		console.log('n5',generalUtil.hasVal(n5));
-		console.log('n6',generalUtil.hasVal(n6));
-		console.log('n7',generalUtil.hasVal(n7));
-		console.log('n8',generalUtil.hasVal(n8));
-		console.log('n9',generalUtil.hasVal(n9));
-		console.log('n10',generalUtil.hasVal(n10));
+		console.log('--- hasVal -----')	
+		console.log('n2', hasVal(n2));
+		console.log('n3', hasVal(n3));
+		console.log('n4', hasVal(n4));
+		console.log('n5', hasVal(n5));
+		console.log('n6', hasVal(n6));
+		console.log('n7', hasVal(n7));
+		console.log('n8', hasVal(n8));
+		console.log('n9',  hasVal(n9));
+		console.log('n10', hasVal(n10));
 
+		console.log('--- toInt -----')
+		console.log('', toInt('123'))
+		console.log('', toInt('123.12'))
+		console.log('', toInt('true'))
 
 	</script>
 </body>

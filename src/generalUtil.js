@@ -9,7 +9,7 @@ export const hasVal=(val)=>(!(val===null || typeof val === 'undefined' || val ==
 
 //數值轉字串
 export const toStr=(number)=>(
-	hasVal(number) && !isNaN(number)
+	hasVal(number)
 		? number+''
 		: null
 )
