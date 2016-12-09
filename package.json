@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel -d lib/ src/",
-    "start": "./node_modules/.bin/browserify ./lib/generalUtil.js -o ./example/generalUtil.js && node ./node_modules/.bin/http-server ./example -p 9527"
+    "start": "./node_modules/.bin/browserify ./lib/generalUtil.js -o ./example/generalUtil.js && ./node_modules/.bin/uglifyjs ./example/generalUtil.js -o ./example/generalUtil.min.js && node ./node_modules/.bin/http-server ./example -p 9527"
   },
   "repository": {
     "type": "git",
@@ -51,6 +51,7 @@
     "babel-preset-stage-0": "^6.16.0",
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
-    "http-server": "^0.9.0"
+    "http-server": "^0.9.0",
+    "uglify-js": "^2.7.5"
   }
 }
