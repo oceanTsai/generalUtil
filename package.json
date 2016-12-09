@@ -1,8 +1,8 @@
 {
   "name": "general-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一般性工具",
-  "main": "generalUtil.js",
+  "main": "lib/generalUtil.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel -d lib/ src/",
