@@ -40,13 +40,55 @@ export const filterFloat=(value)=>(
 		: NaN
 )
 
+const conditionLevel1=(val)=>{
+	return !(val===null || typeof val === 'undefined')
+}
+const conditionLevel2=(val)=>{
+	return !(val===null || typeof val === 'undefined' || val === '')
+}
+const conditionLevel3=(val)=>{
+	return !(val===null || typeof val === 'undefined' || val === '' || val==='-1' || val===-1)
+}
+
+//過濾掉空欄位
+export const filterEmptyField=(item, conditionLevel='1')=>{
+	if(hasVal(item)){
+		let keys = Object.keys(item)
+		if(hasVal(keys)){
+			let result = {}
+			let fun = conditionLevel1
+			switch(conditionLevel){
+					case '1':
+						fun = conditionLevel1
+						break
+					case '2':
+						fun = conditionLevel2
+						break
+					case '3':
+						fun = conditionLevel3
+						break
+			}
+			keys.forEach((key)=>{
+				let val = item[key]
+				fun(val) && (result[key] = val)
+			})
+			return result
+		}else{
+			return item
+		}
+	}else{
+		return item
+	}
+}
+
 const generalUtil= {
 	hasVal : hasVal,
 	toStr : toStr,
 	toInt : toInt,
 	clearFloat : clearFloat,
 	filterInt : filterInt,
-	filterFloat : filterFloat
+	filterFloat : filterFloat,
+	filterEmptyField : filterEmptyField
 }
 
 if(!window.generalUtil){

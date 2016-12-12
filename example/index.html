@@ -9,7 +9,7 @@
 	<script>
 		console.log(window.generalUtil);
 		let generalUtil = window.generalUtil;
-		let {toInt , hasVal} = generalUtil;
+		let {toInt , hasVal, filterEmptyField} = generalUtil;
 		var n1 = 123;
 		console.log('toStr',generalUtil.toStr(n1));
 
@@ -33,10 +33,20 @@
 		console.log('n9',  hasVal(n9));
 		console.log('n10', hasVal(n10));
 
-		console.log('--- toInt -----')
-		console.log('', toInt('123'))
-		console.log('', toInt('123.12'))
-		console.log('', toInt('true'))
+		console.log('--- toInt -----');
+		console.log('', toInt('123'));
+		console.log('', toInt('123.12'));
+		console.log('', toInt('true'));
+
+		let kk;
+		let testData = {a:'a', b:'0', c:'-1', d:null, f:-1, g:kk, h:'', i:""}
+		console.log('testData', testData)
+		console.log('filterEmptyField level3',  filterEmptyField(testData, '3'))
+		console.log('filterEmptyField level2',  filterEmptyField(testData, '2'))
+		console.log('filterEmptyField level1',  filterEmptyField(testData, '1'))
+
+		console.log('filterEmptyField {}',  filterEmptyField({}, '3'))
+		console.log('filterEmptyField null',  filterEmptyField(null, '3'))
 
 	</script>
 </body>
