@@ -1,6 +1,6 @@
 {
   "name": "general-util",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一般性工具",
   "main": "lib/generalUtil.js",
   "scripts": {

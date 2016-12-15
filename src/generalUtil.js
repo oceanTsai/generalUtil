@@ -11,7 +11,7 @@ export const hasVal=(val)=>(!(val===null || typeof val === 'undefined' || val ==
 export const toStr=(number)=>(
 	hasVal(number)
 		? number+''
-		: null
+		: number
 )
 
 //字串轉10進數值
